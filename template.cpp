@@ -27,10 +27,21 @@ using namespace std;
 #define REP(i,a,b) for(int i=a; (int)i<=b;++i)
 #define REPD(i,a,b) for(int i=a; (int)i>=b;--i)
 
-#define REMAX(a,b) (a)=max((a),(b));
-#define REMIN(a,b) (a)=min((a),(b));
-#define DBG cerr << "debug here" << "\n";
-#define DBGV(vari) cerr << #vari<< " = "<< (vari) << "\n";
+#define REMAX(a,b) a=max( a, b);
+#define REMIN(a,b) a=min( a, b);
+
+//print a container
+template<typename T>
+void printContainer(T &t) {
+	for(const auto &e : t) std::cout << e << " ";
+	std::cout << "\n";
+}
+
+//print a object
+template<typename T>
+void println(T &t) {
+    std::cout << t << "\n";
+}
 
 using LL = long long;
 using ULL = unsigned long long;
@@ -63,13 +74,12 @@ using ULL = unsigned long long;
 
 int main()
 {
-    DBG;
     FOR(i, 10) {
-        DBGV(i);
+        println(i);
     }
 
     REP(i, 10, 20){
-        DBGV(i);
+        println(i);
     }
 
     return 0;
