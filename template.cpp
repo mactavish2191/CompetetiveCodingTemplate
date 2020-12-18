@@ -39,7 +39,12 @@ void printContainer(T &t) {
 
 //print a object
 template<typename T>
-void println(T &t) {
+void println(T &t) {  //lhs ref
+    std::cout << t << "\n";
+}
+
+template<typename T>
+void println(T &&t) {  //rhs ref
     std::cout << t << "\n";
 }
 
